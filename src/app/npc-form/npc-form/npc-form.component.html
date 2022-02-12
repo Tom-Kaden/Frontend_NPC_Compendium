@@ -1,0 +1,62 @@
+<div class="card my-5">
+  <div class="card-body">
+    <form (ngSubmit)="onSubmit()" #npcForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" [(ngModel)]="npc.name"
+               class="form-control"
+               id="name"
+               name="name"
+               placeholder="Enter NPC name">
+      </div>
+      <div class="form-group">
+        <label for="name">Race</label>
+        <input type="text" [(ngModel)]="npc.race"
+               class="form-control"
+               id="race"
+               name="race"
+               placeholder="Enter NPC Race">
+      </div>
+      <div class="form-group">
+        <label for="name">Belonging</label>
+        <input type="text" [(ngModel)]="npc.belonging"
+               class="form-control"
+               id="belonging"
+               name="belonging"
+               placeholder="Enter Belonging">
+      </div>
+      <div class="form-group">
+        <label for="name">Description</label>
+        <input type="text" [(ngModel)]="npc.description"
+               class="form-control"
+               id="description"
+               name="description"
+               placeholder="Enter Description">
+      </div>
+      <div class="form-group">
+        <label for="name">Shop Location</label>
+        <input type="text" [(ngModel)]="npc.shopLocation"
+               class="form-control"
+               id="shopLocation"
+               name="shopLocation"
+               placeholder="Enter Shop Location">
+      </div>
+      <div class="form-group">
+        <label for="name">Shopkeeper</label>
+        <input type="checkbox" [(ngModel)]="npc.shopkeeper"
+               class="form-control"
+               id="shopkeeper"
+               name="shopkeeper">
+      </div>
+      <div class="form-group">
+        <label for="name">Alive?</label>
+        <input type="checkbox" [(ngModel)]="npc.alive"
+               class="form-control"
+               id="alive"
+               name="alive">
+      </div>
+      <button type="submit"
+              class="btn btn-info">Submit</button>
+    </form>
+  </div>
+</div>

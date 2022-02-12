@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularclient';
+
+  constructor() {
+    this.title = 'NPC Compendium';
+  }
 }

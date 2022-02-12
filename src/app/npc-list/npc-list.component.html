@@ -1,0 +1,30 @@
+<div class="card my-5">
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Rasse</th>
+        <th scope="col">Angehörigkeit</th>
+        <th scope="col">Beschreibung</th>
+        <th scope="col">Ladenbesitzer</th>
+        <th scope="col">Ladenlocation</th>
+        <th scope="col">lebendig</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let npc of npcs">
+        <td>{{ npc.id }}</td>
+        <td>{{ npc.name }}</td>
+        <td>{{ npc.race }}</td>
+        <td>{{ npc.belonging }}</td>
+        <td>{{ npc.description }}</td>
+        <td>{{ npc.shopkeeper}}</td>
+        <td>{{ npc.shopLocation}}</td>
+        <td>{{ npc.alive}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

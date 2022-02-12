@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BaseComponent } from './base.component';
+import { NpcListComponent } from './npc-list.component';
 
-describe('BaseComponent', () => {
-  let component: BaseComponent;
-  let fixture: ComponentFixture<BaseComponent>;
+describe('NpcListComponent', () => {
+  let component: NpcListComponent;
+  let fixture: ComponentFixture<NpcListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BaseComponent ]
+      declarations: [ NpcListComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BaseComponent);
+    fixture = TestBed.createComponent(NpcListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
