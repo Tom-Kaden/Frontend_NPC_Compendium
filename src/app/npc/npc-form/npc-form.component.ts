@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Npc} from "../../npc/npc";
+import {Npc} from "../npc";
 import {ActivatedRoute, Router} from "@angular/router";
 import {NpcService} from "../../service/npc.service";
 

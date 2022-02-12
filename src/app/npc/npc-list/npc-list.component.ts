@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Npc} from "../npc/npc";
-import {NpcService} from "../service/npc.service";
+import {Npc} from "../npc";
+import {NpcService} from "../../service/npc.service";
 
 @Component({
   selector: 'app-npc-list',
