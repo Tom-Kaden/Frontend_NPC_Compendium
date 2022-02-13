@@ -6,7 +6,7 @@ export class Npc {
   belonging: string;
   description: string;
   shopLocation: string;
-  shopkeeper: string;
+  shopKeeper: string;
   alive: string;
 
 }

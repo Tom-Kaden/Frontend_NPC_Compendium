@@ -21,4 +21,8 @@ export class NpcService {
   public save(npc: Npc) {
     return this.http.post<Npc>(this.npcsUrl, npc);
   }
+
+  public delete(npc: Npc) {
+    return this.http.delete<Npc>(this.npcsUrl + "/" + npc.id);
+  }
 }

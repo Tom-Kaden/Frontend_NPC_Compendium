@@ -11,18 +11,24 @@
         <th scope="col">Ladenbesitzer</th>
         <th scope="col">Ladenlocation</th>
         <th scope="col">lebendig</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
       </tr>
       </thead>
       <tbody>
       <tr *ngFor="let npc of npcs">
         <td>{{ npc.id }}</td>
-        <td>{{ npc.name }}</td>
+        <td><a (click)="openNpc()">{{ npc.name }}</a></td>
         <td>{{ npc.race }}</td>
         <td>{{ npc.belonging }}</td>
         <td>{{ npc.description }}</td>
-        <td>{{ npc.shopkeeper}}</td>
-        <td>{{ npc.shopLocation}}</td>
+        <td>{{ npc.shopKeeper }}</td>
+        <td>{{ npc.shopLocation }}</td>
         <td>{{ npc.alive}}</td>
+        <td><span class="btn btn-primary btn-xs" (click)="editNpc(npc.id)">
+                  <span class="glyphicon glyphicon-pencil"></span></span></td>
+        <td><span class="btn btn-danger btn-xs" (click)="deleteNpc(this.npc)">
+                  <span class="glyphicon glyphicon-trash"></span></span></td>
       </tr>
       </tbody>
     </table>

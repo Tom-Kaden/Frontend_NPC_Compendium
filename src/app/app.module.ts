@@ -8,12 +8,14 @@ import { NpcFormComponent } from './npc/npc-form/npc-form.component';
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {NpcService} from "./service/npc.service";
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NpcListComponent,
-    NpcFormComponent
+    NpcFormComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
