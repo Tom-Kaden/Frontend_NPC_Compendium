@@ -19,10 +19,13 @@ export class NpcService {
   }
 
   public save(npc: Npc) {
-    return this.http.post<Npc>(this.npcsUrl, npc);
+    console.log("NPC Service Send:");
+    console.log(npc);
+    // TODO: 30.03.2022 Image isnt sent correctly, but the other values are
+    return this.http.post(this.npcsUrl, npc);
   }
 
   public delete(npc: Npc) {
-    return this.http.delete<Npc>(this.npcsUrl + "/" + npc.id);
+    return this.http.delete(this.npcsUrl + "/" + npc.id).subscribe();
   }
 }
