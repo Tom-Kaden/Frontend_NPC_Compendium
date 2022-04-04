@@ -1,7 +1,7 @@
 export class Npc {
 
   id: any;
-  picture: any;
+  image: any;
   name: any;
   race: any;
   belonging: any;

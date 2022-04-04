@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
+import {map, Observable} from "rxjs";
 import {Npc} from "../npc/npc";
 
 @Injectable({
@@ -22,7 +22,12 @@ export class NpcService {
     console.log("NPC Service Send:");
     console.log(npc);
     // TODO: 30.03.2022 Image isnt sent correctly, but the other values are
-    return this.http.post(this.npcsUrl, npc);
+    return this.http.post(this.npcsUrl, npc)
+      .pipe(
+        map((res: any) => {
+          console.log(res);
+          return res;
+    }));
   }
 
   public delete(npc: Npc) {

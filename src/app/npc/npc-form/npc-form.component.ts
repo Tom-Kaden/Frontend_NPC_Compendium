@@ -12,7 +12,7 @@ export class NpcFormComponent implements OnInit {
 
   npc: Npc;
 
-  base64Array: Uint8Array[] = [];
+  base64Image: string = "";
 
   constructor(private route: ActivatedRoute,
               private router: Router,
@@ -21,7 +21,7 @@ export class NpcFormComponent implements OnInit {
   }
 
   onSubmit() {
-    this.npc.picture = this.base64Array;
+    this.npc.image = this.base64Image;
     console.log("NPC Form Submit:");
     console.log(this.npc);
     this.npcService.save(this.npc).subscribe(result => this.goToNpcList());
@@ -37,17 +37,16 @@ export class NpcFormComponent implements OnInit {
   convertImageToBase64(event:any) {
     var files = event.target.files;
     var file = files[0];
-
     if (files && file) {
       let reader = new FileReader();
-      reader.onload = this.handleReaderLoaded.bind(this);
       reader.readAsDataURL(file);
+      reader.onload = this.handleReaderLoaded.bind(this);
     }
   }
 
   handleReaderLoaded(readerEvent:any) {
     // var binaryString = readerEvent.target.result.replace("data:", "").replace(/^.+,/, "");
-    this.base64Array = readerEvent.target.result.replace("data:", "").replace(/^.+,/, "");
-    console.log("base64 String: " + this.base64Array);
+    this.base64Image = readerEvent.target.result.replace("data:", "").replace(/^.+,/, "");
+    console.log("base64 String: " + this.base64Image);
   }
 }

@@ -2,7 +2,7 @@
   <div class="card-body">
     <form (ngSubmit)="onSubmit()" #npcForm="ngForm">
       <div class="form-group">
-        <label for="name">Picture</label>
+        <label for="name">Image</label>
         <input type="file"
                class="form-control"
                id="picture"
@@ -67,7 +67,7 @@
               class="btn btn-info">Submit</button>
     </form>
     <div>
-      <textarea id="base64textarea">{{base64Array}}</textarea>
+      <textarea id="base64textarea">{{base64Image}}</textarea>
     </div>
   </div>
 </div>

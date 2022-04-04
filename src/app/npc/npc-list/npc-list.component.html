@@ -19,7 +19,7 @@
       <tbody>
       <tr *ngFor="let npc of npcs">
         <td>{{ npc.id }}</td>
-        <td><a (click)="openNpc()">{{ npc.picture}}</a></td>
+        <td><a (click)="openNpc()"><img src="{{'data:image/png;base64,' + npc.image}}"></a></td>
         <td><a (click)="openNpc()">{{ npc.name }}</a></td>
         <td>{{ npc.race }}</td>
         <td>{{ npc.belonging }}</td>
