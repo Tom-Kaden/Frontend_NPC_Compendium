@@ -19,9 +19,6 @@ export class NpcService {
   }
 
   public save(npc: Npc) {
-    console.log("NPC Service Send:");
-    console.log(npc);
-    // TODO: 30.03.2022 Image isnt sent correctly, but the other values are
     return this.http.post(this.npcsUrl, npc)
       .pipe(
         map((res: any) => {
